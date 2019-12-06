@@ -30,18 +30,35 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+* The dom is created when your HTML parsed 
+* The browser uses the dom to know what work todo: css stuff goes to render engine, js stuff goes to js engine, etc
+* It contains all the structure, content, and logic of a web app/site
+
 2. What is an event?
+
+* An event implement the Event interface
+* Events are used to trigger certain things in the dom like user-input events (onclick, mouseenet)
+* Some events are browser specific and internal, and other events are protocol specific like server sent events
+* A referece to the event is passed as a parameter to the callback passed to an event listener
 
 3. What is an event listener?
 
+* An event listener invokes a callback function when a certain event occurs. 
+* The syntax is: domElement.addEventListener('eventType', callback)
+
 4. Why would we convert a NodeList into an Array?
+
+* To get access to array methods not available on a nodelist
 
 5. What is a component?
 
+* A component is a JS function or class which dynamically creates dom elements.
+* The point of a component is reusability, and it contains logic for addint content, creating elements, and adding attributes.
+
 ### Git Set up
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
+* [x] Fork the project into your GitHub user account
+* [x] Clone the forked project into a directory on your machine
 * [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
 * [ ] You are now ready to build this project with your preferred IDE
 
