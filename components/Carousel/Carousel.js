@@ -35,7 +35,8 @@ function Carousel() {
   mountains.src = "./assets/carousel/mountains.jpeg"
   computer.src = "./assets/carousel/computer.jpeg"
   trees.src = "./assets/carousel/trees.jpeg"
-  turntable.src = "./assets/carousel/mountains.jpeg"
+  turntable.src = "./assets/carousel/turntable.jpeg"
+  mountains.style.display = "block"
 
   carousel.appendChild(leftBtn)
   carousel.appendChild(mountains)
@@ -44,6 +45,38 @@ function Carousel() {
   carousel.appendChild(turntable)
   carousel.appendChild(rightBtn)
 
+  const state = {
+    currentIndex: 0
+  }
+  
+  leftBtn.addEventListener('click', e => {
+    const imgs = document.querySelectorAll('.carousel > img')
+    imgs[state.currentIndex].style.display = 'none'
+
+    if(state.currentIndex === 0) {
+      state.currentIndex = 3
+      imgs[state.currentIndex].style.display = 'block'
+      return
+    }
+    state.currentIndex--
+    imgs[state.currentIndex].style.display = 'block'
+    return 
+  })
+
+  rightBtn.addEventListener('click', e => {
+    const imgs = document.querySelectorAll('.carousel > img')
+    console.log('imgs', imgs)
+    imgs[state.currentIndex].style.display = 'none'
+
+    if(state.currentIndex === 3) {
+      state.currentIndex = 0
+      imgs[state.currentIndex].style.display = 'block'
+      return
+    }
+    state.currentIndex++
+    imgs[state.currentIndex].style.display = 'block'
+    return 
+  })
 
   return carousel
 } 
