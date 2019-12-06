@@ -65,7 +65,6 @@ function Carousel() {
 
   rightBtn.addEventListener('click', e => {
     const imgs = document.querySelectorAll('.carousel > img')
-    console.log('imgs', imgs)
     imgs[state.currentIndex].style.display = 'none'
 
     if(state.currentIndex === 3) {
